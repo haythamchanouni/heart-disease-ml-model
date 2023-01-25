@@ -33,14 +33,14 @@ with col1:
 
 with col2:
     sex = st.selectbox('**Gender**',('Male', 'Female'))
-    chol = st.number_input('**serum cholestoral in ***mg/dl***** ', min_value=100, max_value=300, value=200)
+    chol = st.number_input('**Serum cholestoral in ***mg/dl***** ', min_value=100, max_value=300, value=200)
 
 with st.container():
-    trestbps = st.number_input('**resting blood pressure ***(in mm Hg on admission to the hospital)*****', min_value=50, max_value=250, value=100)
-    fbs = st.selectbox('**fasting blood sugar**', ('True', 'False'))
+    trestbps = st.number_input('**Resting blood pressure ***(in mm Hg on admission to the hospital)*****', min_value=50, max_value=250, value=100)
+    fbs = st.selectbox('**Fasting blood sugar**', ('True', 'False'))
 
 with st.container():
-    thalach = st.number_input('**maximum heart rate achieved** ', min_value=60, max_value=300, value=120)
+    thalach = st.number_input('**Maximum heart rate achieved** ', min_value=60, max_value=300, value=120)
 
 
 if sex == 'Male':
