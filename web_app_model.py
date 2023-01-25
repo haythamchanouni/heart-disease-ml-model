@@ -13,9 +13,6 @@ Y = dataset['target']
 model = LogisticRegression()
 model.fit(X, Y)
 
-
-
-
 st.header("""
     Heart Disease Prediction App
 
