@@ -1,9 +1,18 @@
 import streamlit as st
 import pandas as pd
-import pickle
 from sklearn.linear_model import LogisticRegression
 
-load_model = pickle.load(open('heart_disease.pkl', 'rb'))
+
+dataset = pd.read_csv('./heart.csv')
+
+features = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'thalach']
+
+X = dataset[features]
+Y = dataset['target']
+
+model = LogisticRegression()
+model.fit(X, Y)
+
 
 
 
@@ -50,7 +59,7 @@ df = pd.DataFrame(data)
 
 
 if st.button('predict'):
-    prediction = load_model.predict(df) 
+    prediction = model.predict(df) 
 
     if prediction == 1:
         st.write('You have a **Heart Disease**.')
