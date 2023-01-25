@@ -62,7 +62,7 @@ if st.button('predict'):
         st.write('You have a **Heart Disease**.')
 
     else:
-        st.write('Your heart is in a **good state**.')
+        st.write('Nothing is wrog with your **heart**.')
 
 
     
